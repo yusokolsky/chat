@@ -85,7 +85,7 @@ function roomSendMeassges(msg){
 
  function JoinRoom(Friend) {
 	clearInterval(roomMessageInterval);
-	$.post( 'http://localhost:3000/getrooms/', {}).done(function(req1) {
+	$.post( '/getrooms/', {}).done(function(req1) {
 		for (var z=0;z<req1.length;z++){
 			var rom=req1[z];
 			roomid=rom.participants;
