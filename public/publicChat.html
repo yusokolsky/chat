@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Chat Application</title>
+		<link rel="stylesheet" href="/style.css" type="text/css" />
+		<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+		<script  src="/script.js"></script>
+		<script src="/react.js"></script>
+		<script src="/react-dom.js"></script>
+		<script src="/browser.min.js"></script>
+	</head>
+	<body onLoad="document.getElementsByClassName('Regestration')[0].style.visibility='hidden';document.getElementsByClassName('formaO')[0].style.visibility='hidden';document.getElementsByClassName('Friends')[0].style.visibility='hidden';document.getElementsByClassName('loginN')[0].style.visibility='hidden';"> 
+		<div class="loginN" id="loginN"></div>
+
+		<div class="Vhod">
+			Вход<br>
+			Логин<input type="text" size="20" required id="login"><Br>
+			Пароль<input type="password" size="20" required id="pass"><br>
+			<input type="button" value="Войти" onclick="login()" ><br>
+			<input type="button" value="Зарегестрироваться" onclick="regestform()">
+		</div>
+		<div class="Regestration">
+			<form>
+				Регестрация<br>
+				Логин<input id="loginR" type="text" size="20" required><Br>
+				Пароль<input id="passR" type="password" size="20" required	><br>
+				<input type="submit" value="Зарегестрироваться" onclick="regUsr()">
+			</form>
+		</div>
+
+		<div class="formaO">
+			<div id="messages">
+			</div>
+		message:
+		<TEXTAREA  id="msg" placeholder="type message..." COLS=40 ROWS=1 onkeypress="textareaenter();"></TEXTAREA>
+		<button  onclick="sendMessage()" id="send" >Send</button>
+		</div>  
+		
+	</body>
+ </html>
